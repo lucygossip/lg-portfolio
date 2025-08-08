@@ -7,15 +7,17 @@ import todo from "../images/todo-items.png";
 export default function Projects() {
   const projectList = [
     {
+      id: 1,
       name: "Web Store",
       image: webstore,
       link: "https://l2t11-capstone-project.onrender.com/",
       repo: "https://github.com/lucygossip/l2t11-capstone-project",
       description:
-        "This webstore is created as a capstone project for the HyperionDev and Imperial College London Web Development Bootcamp.",
+        '"Lucy, your application effectively demonstrates your understanding of core React concepts like component creation, state management, and form validation, all of which we covered in previous assignments. Your implementation of a shipping method option and the creation of a visually appealing user interface are particularly commendable."',
       stack: ["HTML", "CSS", "JavaScript", "React", "Redux"],
     },
     {
+      id: 2,
       name: "Full Stack Todo App",
       image: todo,
       link: "",
@@ -28,6 +30,8 @@ export default function Projects() {
 
   const renderedList = projectList.map((project) => (
     <Project
+      key={project.id}
+      projectId={project.id}
       projectName={project.name}
       projectImage={project.image}
       projectStack={project.stack}
@@ -40,10 +44,12 @@ export default function Projects() {
   return (
     <Container>
       <Row>
-        <Col md="4" className="order-2 order-md-1">{renderedList}</Col>
+        <Col md="4" className="order-2 order-md-1">
+          {renderedList}
+        </Col>
         <Col md="8" className="order-1 order-md-2">
           <Flagship />
-          </Col>
+        </Col>
       </Row>
     </Container>
   );

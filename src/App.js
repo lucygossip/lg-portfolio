@@ -3,8 +3,12 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Projects from "./pages/Projects";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    console.log("Thanks for looking at my portfolio!");
+  }, []);
   return (
     <div className="App">
       <Header />
