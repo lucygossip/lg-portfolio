@@ -1,5 +1,6 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import lgHeadshot from "../images/lucy-gossip-headshot.jpg";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -37,12 +38,13 @@ export default function Home() {
                 </Card.Title>
                 <Card.Subtitle style={{ fontSize: "26px", color: "gray" }} className="my-2">Frontend Developer</Card.Subtitle>
                 <Card.Text>
-                  This is some example text on the left side of the card. It’s
-                  meant to describe the image and provide relevant information.
+                  Hello, I'm Lucy, and I write clean and well-structured code for enjoyable user experiences.
                 </Card.Text>
+                <Link to="/projects">
                 <Button variant="success" style={{ fontFamily: "Arial" }} size="lg">
-                  Learn More
+                  View Projects
                 </Button>
+                </Link>
               </Card.Body>
             </Col>
           </Row>
